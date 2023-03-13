@@ -1,0 +1,14 @@
+@font-face {
+    font-family: popMedium;
+    src: url(../../public/fonts/Poppins/Poppins-Medium.otf);
+}
+
+@font-face {
+    font-family: popLight;
+    src: url(../../public/fonts/Poppins/Poppins-Light.otf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
