@@ -104,10 +104,6 @@
     transition: transform 0.3s ease-out;
 }
 
-.btnATK:hover {
-    color: white;
-}
-
 .btnATK:hover:before {
     transform: scaleX(1);
     border-radius: 1vh 0.3vh 0.3vh 0.3vh;
@@ -139,10 +135,6 @@
     transform: scaleX(0);
     transform-origin: 50% 50%;
     transition: transform 0.3s ease-out;
-}
-
-.btnDEF:hover {
-    color: white;
 }
 
 .btnDEF:hover:before {
