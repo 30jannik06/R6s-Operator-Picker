@@ -4,7 +4,6 @@ import elabig from '../../public/img/op-portraits/lion.webp'
 import ela from '../../public/img/op-icons/ela.svg'
 import ATKIcon from "../../public/img/icons/swords.svg";
 import DEFIcon from "../../public/img/icons/shield.svg";
-import {displayRandomOperator} from "@/pages/api/scripts";
 import {attackers, defenders, allOps} from "@/pages/api/operator";
 import Image from "next/image";
 
