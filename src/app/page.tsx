@@ -1,3 +1,5 @@
+"use client";
+
 import styles from './style.module.css'
 import operationHeader from '../../public/img/season/CommandingForceLogo.png'
 import elabig from '../../public/img/op-portraits/lion.webp'
@@ -9,6 +11,10 @@ import Image from "next/image";
 
 
 export default function Home() {
+
+    function randomConsole(e: any, random: string){
+        console.log(random)
+    }
     return (
         <main className={styles.main}>
             <Image className={styles.header} src={operationHeader} alt="operationheader"></Image>
@@ -22,7 +28,7 @@ export default function Home() {
             <a className={styles.selection}>
                 <a className={styles.selectionTitle}>SELECT YOUR ROLE</a>
                 <div className={styles.selectionBtns}>
-                    <button id={styles.btns} className={styles.btnATK} >Attacker
+                    <button id={styles.btns} className={styles.btnATK} onClick={(e)=>randomConsole(e, "random")}>Attacker
                         <Image className={styles.ATKIcon} src={ATKIcon} alt="Attack Icon"/></button>
                     <button id={styles.btns} className={styles.btnDEF}><Image className={styles.DEFIcon} src={DEFIcon}
                                                                               alt="Defend ICON"/>Defender
