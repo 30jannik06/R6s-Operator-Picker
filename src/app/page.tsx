@@ -1,5 +1,4 @@
 "use client";
-
 import styles from './style.module.css'
 import operationHeader from '@/../public/img/season/CommandingForceLogo.png'
 import elabig from '@/../public/img/op-portraits/lion.webp'
