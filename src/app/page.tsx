@@ -1,91 +1,43 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+"use client";
 
-const inter = Inter({ subsets: ['latin'] })
+import styles from './style.module.css'
+import operationHeader from '@/../public/img/season/CommandingForceLogo.png'
+import elabig from '@/../public/img/op-portraits/lion.webp'
+import ela from '@/../public/img/op-icons/ela.svg'
+import ATKIcon from "@/../public/img/icons/swords.svg";
+import DEFIcon from "@/../public/img/icons/shield.svg";
+import GithubLogo from "@/../public/img/icons/github-mark-white.svg"
+import {displayRandomOperator, gotoURL} from "@/app/api/script"
+import Image from "next/image";
+import {attackers, defenders, allOps} from "@/app/api/operator";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
+      <main className={styles.main}>
+        <Image className={styles.header} src={operationHeader} alt="operationheader"></Image>
+        <a className={styles.operator}>
+          <Image className={styles.operatorPortait} src={elabig} alt="ela"></Image>
         </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
+        <a className={styles.operatorIconName}>
+          <Image className={styles.operatorIcon} src={ela} alt="ela"></Image>
+          <a className={styles.operatorName}>ELA</a>
         </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
+        <a className={styles.selection}>
+          <a className={styles.selectionTitle}>SELECT YOUR ROLE</a>
+          <div className={styles.selectionBtns}>
+            <button id={styles.btns} className={styles.btnATK}
+                    onClick={() => displayRandomOperator(attackers)}>Attacker
+              <Image className={styles.ATKIcon} src={ATKIcon} alt="AtkIcon"/>
+            </button>
+            <button id={styles.btns} className={styles.btnDEF} onClick={() => displayRandomOperator(defenders)}>
+              <Image className={styles.DEFIcon} src={DEFIcon} alt="DefICON"/>
+              Defender
+            </button>
+          </div>
         </a>
-      </div>
-    </main>
+        <a className={styles.github}>
+          <Image className={styles.githubIcon} onClick={()=>gotoURL("https://github.com/30jannik06/R6s-Operator-Picker")}  src={GithubLogo} alt="operationheader"></Image>
+        </a>
+      </main>
   )
 }
