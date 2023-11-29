@@ -1,0 +1,18 @@
+{
+	"attackers": [
+		{
+			"name": "blackbeard"
+		},
+		{
+			"name": "lion"
+		}
+	],
+	"defenders": [
+		{
+			"name": "mira"
+		},
+		{
+			"name": "mute"
+		}
+	]
+}

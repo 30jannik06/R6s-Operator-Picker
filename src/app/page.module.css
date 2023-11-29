@@ -1,0 +1,63 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.headerImg {
+    height: auto;
+    width: 30%;
+    margin-top: 4vh;
+}
+
+.opPictureBase {
+    margin-top: 4vh;
+    height: 40vh;
+    width: 100%;
+    background-color: #1b1b1b77;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.oportraitImg {
+    height: 100%;
+    width: auto;
+    z-index: 1;
+}
+
+.opiconImg {
+    height: 10%;
+    width: auto;
+    position: absolute;
+    z-index: 2;
+}
+
+.buttonsBase {
+    margin-top: 2vh;
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    height: 80%;
+    width: 10%;
+    color: #fff;
+    margin: 0.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.atk {
+    background-color: #ff0000;
+}
+
+#def {
+    background-color: #008000;
+}
