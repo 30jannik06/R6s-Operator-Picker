@@ -2,10 +2,10 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import headerImage from "@/img/season/CommandingForceLogo.png"
-import attackerPortrait from "@/img/op-portraits/blitz.webp";
-import defenderPortrait from "@/img/op-portraits/alibi.webp";
-import attackerIcon from "@/img/op-icons/blitz.svg";
-import defenderIcon from "@/img/op-icons/alibi.svg";
+import attackerPortrait from "@/img/op-portraits/attacker/blitz.webp";
+import defenderPortrait from "@/img/op-portraits/defender/alibi.webp";
+import attackerIcon from "@/img/op-icons/attacker/blitz.svg";
+import defenderIcon from "@/img/op-icons/defender/alibi.svg";
 import {useState} from "react";
 
 export default function Home() {
@@ -23,7 +23,8 @@ export default function Home() {
     };
     return (
         <main className={styles.main}>
-            <Image src={headerImage} className={styles.headerImg} alt=''></Image>
+            <Image src={headerImage} className={styles.headerImg} alt='' draggable={"false"}
+                   contextMenu={"false"}></Image>
             <div className={styles.opPictureBase}>
                 <Image src={portrait} alt="" className={styles.oportraitImg} draggable={"false"}
                        contextMenu={"false"}></Image>
@@ -31,10 +32,10 @@ export default function Home() {
                        contextMenu={"false"}></Image>
             </div>
             <div className={styles.buttonsBase}>
-                <div className={`${styles.buttons} atk`} style={{backgroundColor: "#ff0000"}}
+                <div className={styles.buttons} style={{backgroundColor: "#ff0000"}}
                      onClick={() => handleButtonClick("attacker")}>Attacker
                 </div>
-                <div className={`${styles.buttons} atk`} style={{backgroundColor: "#008000"}}
+                <div className={styles.buttons} style={{backgroundColor: "#008000"}}
                      onClick={() => handleButtonClick("defender")}>Defender
                 </div>
             </div>
