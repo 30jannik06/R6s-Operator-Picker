@@ -3,10 +3,16 @@
   margin: 0;
 }
 
+/*
 body {
   background-image: url(../../public/back.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   backdrop-filter: blur(1.5vh);
+}
+ */
+
+body{
+  background: #212e50 url(https://static-dm.ubisoft.com/siege/prod/7907369fa863844fc1ae432a9ca0e610.jpg) 50% 50% repeat-y;
 }
